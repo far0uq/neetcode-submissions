@@ -1,0 +1,9 @@
+class KthLargest:
+    def __init__(self, k: int, nums: List[int]):
+        self.kth_position = k
+        self.nums = sorted(nums)
+    def add(self, val: int) -> int:
+        self.nums.append(val)
+        self.nums = sorted(self.nums)
+        print(self.nums)
+        return self.nums[len(self.nums) - self.kth_position]
